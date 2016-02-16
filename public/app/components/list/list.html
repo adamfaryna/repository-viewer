@@ -1,0 +1,6 @@
+<div class="record" ng-repeat="record in records">
+  <a ui-sref="details({id:{{record.id}}})">{{record.caption}}</a>
+  <rv-column type="stars" value="{{record.stars}}"></rv-column>
+  <rv-column type="views" value="{{record.views}}"></rv-column>
+  <rv-column type="forks" value="{{record.forks}}"></rv-column>
+</div>

@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Blackjack</title>
+  <title>Repository Viewer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Adam Faryna (https://github.com/adamfaryna)">
-  <meta name="description" content="Blackjack game">
+  <meta name="description" content="Repository Viewer">
   <meta name="robots" content="all">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
@@ -14,23 +14,39 @@
   <!-- endbower -->
 
   <!-- inject:css -->
+  <link rel="stylesheet" href="css/style.css">
   <!-- endinject -->
 
   <!-- bower:js -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <!-- endbower -->
 
   <!-- inject:js -->
+  <script src="app/app.js"></script>
+  <script src="app/config.js"></script>
+  <script src="app/constants.js"></script>
+  <script src="app/details/details.controller.js"></script>
+  <script src="app/listing/listing.controller.js"></script>
+  <script src="app/service/logger.service.js"></script>
+  <script src="app/service/rest.service.js"></script>
+  <script src="app/components/column/column.directive.js"></script>
+  <script src="app/components/list/list.directive.js"></script>
+  <script src="app/components/listRecord/listRecord.directive.js"></script>
+  <script src="app/components/stars/stars.directive.js"></script>
+  <script src="app/components/views/views.directive.js"></script>
   <!-- endinject -->
 </head>
 
-<body ng-app="blackjack" ng-strict-di>
+<body ng-app="repositoryViewer" ng-strict-di>
 <div id="container">
-  <header>
+  <header class="main-header">
     <h1>Repository Viewer</h1>
     <span>Karl O'Keeffe</span>
   </header>
-  <div ui-view id="content"></div>
-  <footer>
+  <div id="content" ui-view></div>
+  <footer class="main-footer">
   </footer>
 </div>
 </body>
