@@ -1,0 +1,23 @@
+{
+  "name": "repository-viewer",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Adam Faryna <adamfaryna@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-mocks": "^1.5.0",
+    "angular-ui-router": "^0.2.18"
+  }
+}
