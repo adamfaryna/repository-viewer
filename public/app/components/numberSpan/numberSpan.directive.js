@@ -1,9 +1,8 @@
 'use strict';
 
-angular.module('repositoryViewer').directive('rvColumn', [function () {
+angular.module('repositoryViewer').directive('rvNumberSpan', [function () {
   return {
     restrict: 'E',
-    require: '^list',
     scope: {
       value: '@',
       type: '@'

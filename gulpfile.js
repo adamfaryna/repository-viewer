@@ -7,8 +7,8 @@ var $            = require('gulp-load-plugins')();
 gulp.task('lint', function() {
   return gulp.src(['public/app/**/*.js', 'test/**/*.js', 'gulpfile.js'])
     .pipe($.jshint('.jshintrc'))
-    .pipe($.jshint.reporter('jshint-stylish'));
-    //.pipe($.jshint.reporter('fail'));
+    .pipe($.jshint.reporter('jshint-stylish'))
+    .pipe($.jshint.reporter('fail'));
 });
 
 // Compile less into CSS & auto-inject into browsers

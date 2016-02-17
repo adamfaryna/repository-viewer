@@ -1,11 +1,19 @@
 <div class="record-details">
   <article>
-    <header>{{data.caption}}</header>
-    <section class="modify-date">{{data.details}}</section>
-    <section class="numbers">{{data.details}}</section>
-    <section class="content">{{data.details}}</section>
-    <footer></footer>
+    <header>
+      <span class="header">{{data.caption}}</span>
+      <div class="modify-date">Last updated {{data.modified | date : 'MMM, yyyy'}}</div>
+      <div class="numbers">
+        <rv-number-span type="stars" value="{{data.stars}}"></rv-number-span>
+        <rv-number-span type="views" value="{{data.views}}"></rv-number-span>
+        <rv-number-span type="forks" value="{{data.forks}}"></rv-number-span>
+      </div>
+    </header>
+    <section class="content">
+      <p>{{data.details}}</p>
+    </section>
+    <footer>
+      <a ui-sref="listing()">Back to list</a>
+    </footer>
   </article>
 </div>
-
-<a ui-sref="listing()">Back to list</a>

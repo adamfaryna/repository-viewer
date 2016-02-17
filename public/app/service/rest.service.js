@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('repositoryViewer').service('restService', ['$http', '$q', function($http, $q) {
+angular.module('repositoryViewer').service('restService', ['$http', '$q', 'logger', function($http, $q, logger) {
   this.getData = function () {
     var deffer = $q.defer();
 

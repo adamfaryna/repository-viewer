@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp serve"
   },
-  "author": "",
+  "author": "Adam Faryna (https://github.com/adamfaryna)",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.3.3",

@@ -6,10 +6,6 @@ angular.module('repositoryViewer').directive('rvList', ['componentsPath', functi
     scope: {
       records: '='
     },
-    templateUrl: componentsPath + 'list/list.html',
-    link: function (scope) {
-      //scope.records = [];
-
-    }
+    templateUrl: componentsPath + 'list/list.html'
   };
 }]);

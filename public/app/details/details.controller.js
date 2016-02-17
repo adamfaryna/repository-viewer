@@ -4,7 +4,7 @@ angular.module('repositoryViewer').controller('DetailsCtrl', ['$scope', '$stateP
 
   restService.getData().then(function (data) {
     for (var i in data) {
-      if (data[i].id == $stateParams.id) {
+      if (data[i].id === +$stateParams.id) {
         $scope.data = data[i];
         break;
       }
