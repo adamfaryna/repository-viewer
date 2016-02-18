@@ -2,7 +2,6 @@
   "name": "repository-viewer",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "gulp serve",
     "test": "karma start karma.conf.js"
@@ -35,7 +34,6 @@
     "ng-html2js": "^2.0.0",
     "phantomjs": "^2.1.3",
     "phantomjs-prebuilt": "^2.1.4",
-    "protractor": "^3.1.1",
     "wiredep": "^3.0.0"
   }
 }

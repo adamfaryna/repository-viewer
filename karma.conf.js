@@ -9,7 +9,7 @@ module.exports = function(config){
       'public/bower_components/angular/angular.js',
       'public/bower_components/angular-ui-router/release/angular-ui-router.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      'node_modules/jquery/jquery.min.js',
+      'node_modules/jquery/dist/jquery.min.js',
       'public/app/**/*.html',
       'public/app/**/*.js',
       'test/app/**/*.js'
