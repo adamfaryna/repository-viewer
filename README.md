@@ -19,7 +19,7 @@ Services:
 * rest - service for making REST calls for getting data from the server.
 
 Views:
-* Listing - show a list of records in tabular form. Default view.
+* Listing - show a list of repositories in tabular form. Default view.
 * Details - shows details of the selected record. Required recordId parameter.
 
 Application is build using GulpJS. Current version runs on BrowserSync.
