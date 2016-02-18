@@ -19,7 +19,6 @@
     "after"      : false,
     "afterEach"  : false,
     "angular"    : false,
-    "app"        : true,
     "$"          : true,
     "jasmine"    : true,
     "inject"     : true,

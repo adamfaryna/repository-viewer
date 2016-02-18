@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(config){
   config.set({
     basePath : './',
@@ -6,22 +8,36 @@ module.exports = function(config){
     files : [
       'public/bower_components/angular/angular.js',
       'public/bower_components/angular-ui-router/release/angular-ui-router.js',
-      'public/bower_components/angular-mocks/angular-mocks.js',
+      'node_modules/angular-mocks/angular-mocks.js',
+      'node_modules/jquery/jquery.min.js',
+      'public/app/**/*.html',
       'public/app/**/*.js',
-      'test/**/*.js'
+      'test/app/**/*.js'
     ],
 
     autoWatch : true,
 
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine-jquery', 'jasmine'],
 
-    browsers : ['Chrome'],
+    browsers : ['PhantomJS'],
 
     plugins : [
       'karma-chrome-launcher',
+      'karma-phantomjs-launcher',
       'karma-jasmine',
-      'karma-junit-reporter'
+      'karma-jasmine-jquery',
+      'karma-junit-reporter',
+      'karma-ng-html2js-preprocessor'
     ],
+
+    preprocessors: {
+      'public/app/**/*.html': 'ng-html2js'
+    },
+
+    ngHtml2JsPreprocessor: {
+      stripPrefix: 'public/',
+      moduleName: 'templatesHtml'
+    },
 
     junitReporter : {
       outputFile: 'test_out/unit.xml',
