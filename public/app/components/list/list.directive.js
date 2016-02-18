@@ -1,11 +1,16 @@
 'use strict';
 
-angular.module('repositoryViewer').directive('rvList', ['componentsPath', function (componentsPath) {
+angular.module('repositoryViewer').directive('rvList', ['componentsPath', '$state', function (componentsPath, $state) {
   return {
     restrict: 'E',
     scope: {
       records: '='
     },
-    templateUrl: componentsPath + 'list/list.html'
+    templateUrl: componentsPath + 'list/list.html',
+    link: function (scope) {
+      scope.goToDetails = function (recordId) {
+        $state.go('details', { 'id': recordId });
+      };
+    }
   };
 }]);

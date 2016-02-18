@@ -1,6 +1,7 @@
 @basic-font-color: #777777;
 @block-background-color: #fbfbfb;
 @basic-link-color: #337ab7;
+@block-border-color: #e7e7e7;
 
 * {
   color: @basic-font-color;
@@ -9,11 +10,6 @@
 
 body {
   margin: 0;
-}
-
-a {
-  color: @basic-link-color;
-  text-decoration: none;
 }
 
 h1 {
@@ -31,7 +27,7 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
 
-    border: 1px solid #e7e7e7;
+    border: 1px solid @block-border-color;
     border-radius: 5px;
     background-color: @block-background-color;
     margin-bottom: 30px;
@@ -78,12 +74,14 @@ rv-list {
     display: table-row;
     border-top: 1px solid #dddddd;
     background-clip: padding-box;
+    cursor: pointer;
 
-    a {
+    .caption {
       font-weight: bold;
+      color: @basic-link-color
     }
 
-    a, rv-number-span {
+    .caption, rv-number-span {
       display: table-cell;
       padding-left: 10px;
       line-height: 42px;
@@ -149,9 +147,7 @@ rv-list {
 }
 
 @media screen and (max-width : 420px) {
-  .record-details article {
-    header {
-      flex-direction: column;
-    }
+  .record-details article header {
+    flex-direction: column;
   }
 }

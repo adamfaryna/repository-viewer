@@ -1,5 +1,5 @@
-<div class="record" ng-repeat="record in records">
-  <a ui-sref="details({id:{{record.id}}})">{{record.caption}}</a>
+<div class="record" ng-repeat="record in records" ng-click="$parent.goToDetails(record.id)">
+  <span class="caption">{{record.caption}}</span>
   <rv-number-span type="stars" value="{{record.stars}}"></rv-number-span>
   <rv-number-span type="views" value="{{record.views}}"></rv-number-span>
   <rv-number-span type="forks" value="{{record.forks}}"></rv-number-span>
